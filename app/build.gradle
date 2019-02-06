@@ -37,4 +37,8 @@ dependencies {
     //for circle imageview
     implementation 'de.hdodenhof:circleimageview:3.0.0'
     //for circle image view
+
+    //For material searchview
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
+    //For material searchview
 }

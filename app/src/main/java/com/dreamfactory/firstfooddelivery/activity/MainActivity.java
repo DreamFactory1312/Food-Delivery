@@ -1,5 +1,6 @@
-package com.dreamfactory.firstfooddelivery;
+package com.dreamfactory.firstfooddelivery.activity;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -20,6 +21,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dreamfactory.firstfooddelivery.R;
 import com.dreamfactory.firstfooddelivery.adapter.GridAdapter;
 import com.dreamfactory.firstfooddelivery.model.GridPojo;
 import com.smarteist.autoimageslider.DefaultSliderView;
@@ -49,7 +51,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.navigation_drawer);
-// Hello helper branch
 // now in master branch
         //For toolbar
         toolbar = (Toolbar) findViewById(R.id.toolBar);
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //Start For setting gridView on recyclerview
         recyclerView = findViewById(R.id.gridRecyclerView);
-        gridLayoutManager = new GridLayoutManager(MainActivity.this, 3);
+        gridLayoutManager = new GridLayoutManager(MainActivity.this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
 
         gridAdapter = new GridAdapter(this, getData());
@@ -158,6 +159,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (id) {
             case R.id.navigation_menu_itemid_restaurant:
                 Toast.makeText(this, "Clicked Restaurant", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), RestaurantActivity.class));
                 break;
             case R.id.navigation_menu_itemid_menu:
                 Toast.makeText(this, "Clicked Menu", Toast.LENGTH_SHORT).show();
@@ -248,31 +250,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private List<GridPojo> getData() {
 
         gridPojoList = new ArrayList<>();
-        GridPojo pojo = new GridPojo(R.drawable.grid_restaurant_icon, "Restaurant");
+        GridPojo pojo = new GridPojo(R.drawable.r1, "Hotel Castle Salam");
         gridPojoList.add(pojo);
 
-        pojo = new GridPojo(R.drawable.grid_menu_icon, "Menu");
+        pojo = new GridPojo(R.drawable.r2, "Kitchen Garden");
         gridPojoList.add(pojo);
 
-        pojo = new GridPojo(R.drawable.grid_cartmenu_icon, "Cart");
+        pojo = new GridPojo(R.drawable.r3, "Food Pales");
         gridPojoList.add(pojo);
 
-        pojo = new GridPojo(R.drawable.grid_favorite_icon, "Favorite");
+        pojo = new GridPojo(R.drawable.r4, "Good Kitschen");
         gridPojoList.add(pojo);
 
-        pojo = new GridPojo(R.drawable.grid_gallery_icon, "Gallery");
+        pojo = new GridPojo(R.drawable.r5, "Dorbar Kitchen");
         gridPojoList.add(pojo);
 
-        pojo = new GridPojo(R.drawable.grid_news_icon, "News");
+        pojo = new GridPojo(R.drawable.r5, "Green Village");
         gridPojoList.add(pojo);
 
-        pojo = new GridPojo(R.drawable.grid_location_icon, "Location");
+        pojo = new GridPojo(R.drawable.r6, "Food Maker");
         gridPojoList.add(pojo);
 
-        pojo = new GridPojo(R.drawable.grid_social_icon, "Social");
+        pojo = new GridPojo(R.drawable.r6, "Food Maker");
         gridPojoList.add(pojo);
 
-        pojo = new GridPojo(R.drawable.grid_about_icon, "About");
+        pojo = new GridPojo(R.drawable.r6, "Food Maker");
         gridPojoList.add(pojo);
 
         return gridPojoList;

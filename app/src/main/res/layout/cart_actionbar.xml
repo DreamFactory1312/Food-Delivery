@@ -9,10 +9,11 @@
         android:id="@+id/cart_actionbar_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/text_background"
         android:gravity="start"
         android:text="11"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/cartColor"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="12sp"
         android:textStyle="bold" />
     <!-- Menu Item Image -->

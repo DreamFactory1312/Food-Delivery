@@ -21,9 +21,9 @@
 
             <ImageView
                 android:id="@+id/gridImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/grid_about_icon" />
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/r1" />
 
             <TextView
                 android:id="@+id/gridText"
