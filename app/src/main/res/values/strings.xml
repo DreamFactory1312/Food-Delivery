@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">First Food Delivery</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="menu">Menu</string>
+    <string name="cart">Cart</string>
+    <string name="favorite">Favorite</string>
+    <string name="gallery">Gallery</string>
+    <string name="location">Location</string>
+    <string name="advance_option">Advance Option</string>
+    <string name="news">News</string>
+    <string name="social">Social</string>
+    <string name="about">About</string>
+
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
+</resources>

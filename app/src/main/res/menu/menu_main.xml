@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/favorite_item_id"
+        android:actionLayout="@layout/favorite_actionbar"
+        android:icon="@drawable/ic_favorite_border_white_48dp"
+        android:title=""
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/cart_item_id"
+        android:actionLayout="@layout/cart_actionbar"
+        android:icon="@drawable/ic_shopping_cart_white_48dp"
+        android:title=""
+        app:showAsAction="ifRoom" />
+
+</menu>
