@@ -45,7 +45,11 @@ public class RestaurantActivity extends AppCompatActivity {
 
         //Start For setting gridView on recyclerview
         recyclerView = findViewById(R.id.restaurantRecyclerView);
-        gridLayoutManager = new GridLayoutManager(RestaurantActivity.this, 2);
+        if (getApplicationContext().getResources().getConfiguration().orientation == 1) {
+            gridLayoutManager = new GridLayoutManager(RestaurantActivity.this, 2);
+        } else if (getApplicationContext().getResources().getConfiguration().orientation == 2) {
+            gridLayoutManager = new GridLayoutManager(RestaurantActivity.this, 3);
+        }
         recyclerView.setLayoutManager(gridLayoutManager);
 
         gridAdapter = new GridAdapter(this, getData());
@@ -75,12 +79,6 @@ public class RestaurantActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         switch (id) {
-            case R.id.menuall_favorite_item_id:
-                Toast.makeText(this, "Clicked Favorite Item", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.menuall_cart_item_id:
-                Toast.makeText(this, "Clicked Cart Item", Toast.LENGTH_SHORT).show();
-                break;
             //Display back button implementation
             case android.R.id.home:
                 Toast.makeText(this, "Back to Display", Toast.LENGTH_SHORT).show();
@@ -115,7 +113,7 @@ public class RestaurantActivity extends AppCompatActivity {
         txtCartCount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(RestaurantActivity.this, "Clicked Cart", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RestaurantActivity.this, "Clicked Cart Simple", Toast.LENGTH_SHORT).show();
             }
         });
 

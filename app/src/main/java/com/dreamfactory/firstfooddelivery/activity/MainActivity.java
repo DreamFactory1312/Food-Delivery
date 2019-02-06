@@ -66,7 +66,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         actionBarDrawerToggle.syncState();
         //Navigation bar settings
 
-
         //For Slider Image View
         sliderLayout = findViewById(R.id.imageSlider);
         sliderLayout.setIndicatorAnimation(IndicatorAnimations.SWAP); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
@@ -77,7 +76,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //Start For setting gridView on recyclerview
         recyclerView = findViewById(R.id.gridRecyclerView);
-        gridLayoutManager = new GridLayoutManager(MainActivity.this, 2);
+        if (getApplicationContext().getResources().getConfiguration().orientation == 1) {
+            gridLayoutManager = new GridLayoutManager(MainActivity.this, 2);
+        } else if (getApplicationContext().getResources().getConfiguration().orientation == 2) {
+            gridLayoutManager = new GridLayoutManager(MainActivity.this, 3);
+        }
         recyclerView.setLayoutManager(gridLayoutManager);
 
         gridAdapter = new GridAdapter(this, getData());
@@ -165,6 +168,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(this, "Clicked Menu", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.navigation_menu_itemid_cart:
+                startActivity(new Intent(getApplicationContext(), MenuActivity.class));
                 Toast.makeText(this, "Clicked Cart", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.navigation_menu_itemid_favorite:
