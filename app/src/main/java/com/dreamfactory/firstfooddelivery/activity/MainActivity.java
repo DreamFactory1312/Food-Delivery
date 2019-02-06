@@ -165,10 +165,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(getApplicationContext(), RestaurantActivity.class));
                 break;
             case R.id.navigation_menu_itemid_menu:
+                startActivity(new Intent(getApplicationContext(), MenuActivity.class));
                 Toast.makeText(this, "Clicked Menu", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.navigation_menu_itemid_cart:
-                startActivity(new Intent(getApplicationContext(), MenuActivity.class));
                 Toast.makeText(this, "Clicked Cart", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.navigation_menu_itemid_favorite:
