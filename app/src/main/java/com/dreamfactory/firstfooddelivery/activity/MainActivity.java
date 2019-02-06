@@ -35,7 +35,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-//Juyel Rana
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
